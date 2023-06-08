@@ -1,7 +1,6 @@
 <template>
   <AppHeader/>
   <ScrollUpDown />
-
   <router-view/>
 
   <footerDown/>
@@ -32,3 +31,9 @@ export default {
 
 };
 </script>
+<style>
+#app{
+  display: flex;
+  flex-direction: column;
+}
+</style>

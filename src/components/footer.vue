@@ -38,3 +38,8 @@ export default {
     name: 'footerDown'
 }
 </script>
+
+<style>
+.footer{
+    flex-shrink: 0;
+}</style>
