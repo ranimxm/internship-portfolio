@@ -1,4 +1,4 @@
-# internship-portfolio
+# portfolio
 
 ## Project setup
 ```

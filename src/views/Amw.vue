@@ -1,4 +1,7 @@
 <template>
+
+      <LoadingScreen/>
+
         <!-- =====================================work============================================== -->
         <section class="work-section" id="work">
             <div class="work-container">
@@ -26,3 +29,14 @@
 
         </section>
 </template>
+
+<script>
+import LoadingScreen from '@/components/loadingscreen.vue';
+
+export default {
+    components: {
+        LoadingScreen
+    }
+
+};
+</script>
