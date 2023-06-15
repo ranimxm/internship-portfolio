@@ -1,4 +1,24 @@
 <template>
+     <header id="top" class="header">
+            <div class="logo"></div>
+            <nav class="nav">
+                <div>
+                    <ul id="nav">
+                        <li class="active">
+                            <router-link to="/" >Work</router-link>
+                        </li>
+                        <li>
+                            <a href="./files/CV.pdf" target="_blank">CV</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu" id="menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </header>
 
           <LoadingScreen/>
 
@@ -25,7 +45,7 @@
                   <li class="project-item ">
                     <router-link to="/MusicApp">
                           <figure class="item-top">
-                              <img src="/img/gojo.png">
+                              <img src="@/assets/img/music.png">
                           </figure>
                           <figcaption class="item-caption">
                               <h2>Music Application using PWA</h2>
@@ -36,7 +56,7 @@
                   <li class="project-item">
                     <router-link to="/Twitter">
                           <figure class="item-top">
-                              <img src="/img/gojo.png">
+                              <img src="@/assets/img/twt-ii.png">
                           </figure>
                           <figcaption class="item-caption">
                               <h2>Recreated Twitter partly using MongoDB</h2>
@@ -47,7 +67,7 @@
                   <li class="project-item">
                     <router-link to="/amw">
                           <figure class="item-top">
-                              <img src="/img/gojo.png">
+                              <img src="@/assets/img/amw.png">
                           </figure>
                           <figcaption class="item-caption">
                               <h2>AMW Veranda using PHP</h2>
@@ -67,6 +87,17 @@
 import LoadingScreen from '@/components/loadingscreen.vue';
 
 export default {
+    name: 'AppHeader',
+    mounted() {
+        const navigation = document.getElementById("nav");
+        const menu = document.getElementById("menu");
+
+        menu.addEventListener("click", () => {
+            navigation.style.setProperty("--childenNumber", navigation.children.length);
+            navigation.classList.toggle("active");
+            menu.classList.toggle("active");
+        });
+    },
     components: {
         LoadingScreen
     },

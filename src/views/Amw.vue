@@ -1,5 +1,5 @@
 <template>
-
+    <AppHeader/>
       <LoadingScreen/>
 
         <!-- =====================================work============================================== -->
@@ -9,21 +9,36 @@
                     <div class="right">
                         <h3>Bootstrap, PHP</h3>
                         <h1>AMW Veranda</h1>
-                        <p>Text 1</p>
+                        <div class="text">
+                            <p><a href="http://amwveranda.nl/" target="_blank">The website</a> is currently being hosted on GoDaddy.</p>
+                            <p>
+                                I had the opportunity to create a website for a company that specializes in making verandas. The website inclded some useful features to enhance user experience.
+                            </p>
+                            <p>
+                                One of the main functions of the website was to enable users to easily send emails and contact the company. I implemented a feature using PHP that allowed users to send feedback or any otger messageg through the website.
+                                This made it convenient for users as they dont have to switch accounts or switch tabs.
+                            </p>
+                            <p>
+                                another improtant feature I added to the website was the ability for users to choose their preferred language. This way, users couldview the website content the language they were comfortable with.
+                            </p>
+                            <p>
+                                To make the website accessible to users, me and my partner hosted it on GoDaddy, a popular web hosting platform. GoDaddy provided reliable hosting services,.
+                            </p>
+                        </div>
 
                     </div>
                     <div class="left">
-                        <img src="/img/gojo.png">
+                        <img class="img" src="@/assets/img/amw.png">
                     </div>
                 </div>
-                <div class="work-item">
+                <!-- <div class="work-item">
                     <div class="left">
                         <img src="/img/gojo.png">
                     </div>
                     <div class="right">
                         <p class="reveal">Text 2</p>
                     </div>
-                </div>
+                </div> -->
             </div>
 
 
@@ -32,9 +47,11 @@
 
 <script>
 import LoadingScreen from '@/components/loadingscreen.vue';
+import AppHeader from '@/components/header.vue';
 
 export default {
     components: {
+        AppHeader,
         LoadingScreen
     }
 

@@ -7,7 +7,9 @@
                     <li>
                         <router-link to="/">Work</router-link>
                     </li>
-                    <li><a href="/files/CV.1.pdf" target="_blank">CV</a></li>
+                    <li>
+                        <a href="./files/CV.pdf" target="_blank">CV</a>
+                    </li>
 
                 </ul>
             </div>

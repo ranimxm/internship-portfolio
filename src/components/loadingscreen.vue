@@ -15,6 +15,7 @@
     width: 100%;
     height: 100%;
     animation: slideIn 1.1s forwards;
+    overflow: hidden;
 }
 @keyframes slideIn {
     0% {
@@ -40,6 +41,7 @@
     width: 50%;
     height: 100%;
     z-index: 999;
+    overflow: hidden;
     animation: slideOut 1.1s forwards;
 }
 
