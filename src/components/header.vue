@@ -8,7 +8,7 @@
                         <router-link to="/">Work</router-link>
                     </li>
                     <li>
-                        <a href="./files/CV.pdf" target="_blank">CV</a>
+    <a @click="openPDF" href="#">CV</a>
                     </li>
 
                 </ul>
@@ -25,6 +25,13 @@
 <script>
 export default {
     name: 'AppHeader',
+    methods: {
+        openPDF() {
+            const pdfUrl = '/files/CV.pdf';
+            window.open(pdfUrl, '_blank');
+        },
+
+    },
     mounted() {
         const navigation = document.getElementById("nav");
         const menu = document.getElementById("menu");
