@@ -1,5 +1,4 @@
 <template>
-    <AppHeader/>
       <LoadingScreen/>
 
         <!-- =====================================work============================================== -->
@@ -47,11 +46,9 @@
 
 <script>
 import LoadingScreen from '@/components/loadingscreen.vue';
-import AppHeader from '@/components/header.vue';
 
 export default {
     components: {
-        AppHeader,
         LoadingScreen
     }
 

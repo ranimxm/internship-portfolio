@@ -1,5 +1,5 @@
 <template>
-  <!-- <AppHeader/> -->
+  <AppHeader/>
   <ScrollUpDown />
   <router-view/>
 
@@ -8,7 +8,7 @@
 
 <script>
 import LoadingScreen from '@/components/loadingscreen.vue';
-// import AppHeader from '@/components/header.vue';
+import AppHeader from '@/components/header.vue';
 import footerDown from '@/components/footer.vue';
 import ScrollUpDown from '@/components/scrollupdown.vue';
 
@@ -23,7 +23,7 @@ import '@/assets/css/work.scss';
 export default {
   name: 'App',
   components: {
-    // AppHeader,
+    AppHeader,
     footerDown,
     LoadingScreen,
     ScrollUpDown
