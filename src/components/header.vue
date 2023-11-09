@@ -8,6 +8,9 @@
                         <router-link to="/">Work</router-link>
                     </li>
                     <li>
+                        <router-link to="/about">About</router-link>
+                    </li>
+                    <li>
     <a @click="openPDF" href="#">CV</a>
                     </li>
 
