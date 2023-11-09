@@ -3,7 +3,7 @@ module.exports = defineConfig({
   transpileDependencies: true,
 
   pwa: {
-    name: 'Portfolio',
+    name: 'Portfolio Ranim',
     themeColor: '#6853f1',
     msTileColor: '#6853f1',
     appleMobileWebAppCapable: 'yes',

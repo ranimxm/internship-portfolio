@@ -30,7 +30,7 @@ export default {
     name: 'AppHeader',
     methods: {
         openPDF() {
-            const pdfUrl = '/files/CV.pdf';
+            const pdfUrl = '/files/Cv Ranim.pdf';
             window.open(pdfUrl, '_blank');
         },
 

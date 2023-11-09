@@ -18,16 +18,13 @@
                                     I discovered a concept called Progressive Web Application (PWA). This provided me with an opportunity to fulfill my friend's request and also contribute to my school assignment.
                                 </p>
                                 <p>
-                                    With great enthusiasm, I delved into research to bring this music app idea to life. Through my efforts, I successfully developed playlist, real-time updates and a sleek, easy to use interface, providing an enjoyable music experience.
+                                    With enthusiasm, I delved into research to bring this music app idea to life. Through my efforts, I successfully developed playlist, real-time updates and a sleek, easy to use interface, providing an enjoyable music experience.
                                 </p>
                                 <p >
                                         It is important to note that the app primarily is made to Android devices due to limitations. Unfortunately, creating a version 
                                         for iOS devices was not feasible at that time.
-                                    </p>
-                                <p>
-                                    Undertaking this project allowed me to gain experience in PWA development and enhance my skills in mobile app creation. 
-                                    It demonstrated my ability to meet specific requirements and showcases my passion.
                                 </p>
+
                             </div>
 
                         </div>

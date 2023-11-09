@@ -1,9 +1,0 @@
-                    <router-link to="/amw">
-                          <figure class="item-top">
-                              <img src="/img/gojo.png">
-                          </figure>
-                          <figcaption class="item-caption">
-                              <h2>Music Application using PWA</h2>
-                              <p>View more</p>
-                          </figcaption>
-                      </router-link>

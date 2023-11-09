@@ -27,7 +27,7 @@
                  <li class="project-item">
                                 <router-link to="/ReactNative">
                                       <figure class="item-top">
-                                          <img src="@/assets/img/amw.png">
+                                          <img class="react" src="@/assets/img/react.png">
                                       </figure>
                                       <figcaption class="item-caption">
                                           <h2>React Native Music Application 2</h2>
@@ -58,10 +58,10 @@
                           </figcaption>
                       </router-link>
                   </li>
-                                    <li class="project-item">
+                    <li class="project-item">
                         <router-link to="/note">
                               <figure class="item-top">
-                                  <img src="@/assets/img/amw.png">
+                                  <img src="@/assets/img/img.png">
                               </figure>
                               <figcaption class="item-caption">
                                   <h2>Note App with EJS</h2>
