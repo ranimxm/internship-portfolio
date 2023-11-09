@@ -24,17 +24,18 @@
 
           <div class="projects-container">
               <ol class="projects-list reveal">
-                  <li class="project-item ">
-                    <router-link to="/MusicApp">
-                          <figure class="item-top">
-                              <img src="@/assets/img/music.png">
-                          </figure>
-                          <figcaption class="item-caption">
-                              <h2>Music Application using PWA</h2>
-                              <p>View more</p>
-                          </figcaption>
-                      </router-link>
-                  </li>
+                 <li class="project-item">
+                                <router-link to="/ReactNative">
+                                      <figure class="item-top">
+                                          <img src="@/assets/img/amw.png">
+                                      </figure>
+                                      <figcaption class="item-caption">
+                                          <h2>React Native Music Application 2</h2>
+                                          <p>View more</p>
+                                      </figcaption>
+                                  </router-link>
+                              </li>
+                
                   <li class="project-item">
                     <router-link to="/Twitter">
                           <figure class="item-top">
@@ -57,6 +58,28 @@
                           </figcaption>
                       </router-link>
                   </li>
+                                    <li class="project-item">
+                        <router-link to="/note">
+                              <figure class="item-top">
+                                  <img src="@/assets/img/amw.png">
+                              </figure>
+                              <figcaption class="item-caption">
+                                  <h2>Note App with EJS</h2>
+                                  <p>View more</p>
+                              </figcaption>
+                          </router-link>
+                      </li>
+                       <li class="project-item ">
+                        <router-link to="/MusicApp">
+                              <figure class="item-top">
+                                  <img src="@/assets/img/music.png">
+                              </figure>
+                              <figcaption class="item-caption">
+                                  <h2>Music Application using PWA</h2>
+                                  <p>View more</p>
+                              </figcaption>
+                          </router-link>
+                      </li>
               </ol>
           </div>
 

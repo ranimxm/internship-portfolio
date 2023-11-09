@@ -4,6 +4,8 @@ import About from '../views/About.vue'
 import Amw from '../views/Amw.vue'
 import Music from '../views/MusicApp.vue'
 import Twitter from '../views/Twitter.vue'
+import Note from '../views/NoteApp.vue'
+import react from '../views/react.vue'
 
 const routes = [
   {
@@ -30,6 +32,16 @@ const routes = [
     path: '/Twitter',
     name: 'Twitter Recreation',
     component: Twitter
+  },
+  {
+    path: '/note',
+    name: 'Note App',
+    component: Note
+  },
+  {
+    path: '/ReactNative',
+    name: 'React Native',
+    component: react
   }
 ]
 

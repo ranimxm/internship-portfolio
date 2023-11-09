@@ -35,7 +35,7 @@
                             <img class="img" src="@/assets/img/mobile.gif">
                         </div>
                     </div>
-                    <div class="work-item">
+                    <!-- <div class="work-item">
                         <div class="left">
                             <img src="/img/gojo.png">
                         </div>
@@ -49,7 +49,7 @@
                                 It demonstrated my ability to meet specific requirements and showcases my passion.
                             </p>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
 
         
