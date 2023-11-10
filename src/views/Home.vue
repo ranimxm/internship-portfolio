@@ -75,7 +75,7 @@
                                   <img src="@/assets/img/music.png">
                               </figure>
                               <figcaption class="item-caption">
-                                  <h2>Music Application using PWA</h2>
+                                  <h2>Music Application using PWA </h2>
                                   <p>View more</p>
                               </figcaption>
                           </router-link>
