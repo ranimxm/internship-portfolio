@@ -12,7 +12,7 @@
                                             The <a href="https://duocase.onrender.com/" target="_blank">note app</a> is currently hosted on Render.
                                         </p>
                                     <p>
-                                        For school I had to create a solution which helps students to ather evidence for their portfolio, and the solution was to create a note-app which
+                                        For school I had to create a solution which helps students to gather evidence for their portfolio, and the solution was to create a note-app which
                                         generates texts based on the image you uploaded, and summarizes it. It's also able to record and transcribe as well as summarize the recording it uploaded. 
                                         This way the time to write down a summary for a portfolio is less. It also helps to create a startpoint for documentation.  
                                         I was responsible for the 'database' and adding images with text generator using tesseract.js

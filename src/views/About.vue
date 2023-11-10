@@ -10,10 +10,10 @@
             <p>
               I have a strong basis in front-end development, making websites with user-friendly interfaces.
               My toolkit includes technologies like MongoDB, React Native, Vue, FLutter, Flask, EJS and NodeJS. 
-              While my Python skills is still growing, I am always aeger to learn more.
+              While my Python skills are still growing, I am always aeger to learn more.
             </p>
               <p>
-                  Outside coding, I like to draw, playing games and read few books.
+                  Outside coding, I like to draw, playing games and read books.
                 </p>
           
           </div>
@@ -23,7 +23,7 @@
                 Additionally, this profile has made me gain a broad knowledge about user research.
               </p>
               <p>
-                I am currently studying WebAssembly (WASM), another new technology which recently got out. 
+                I am currently studying WebAssembly (WASM), another new technology which recently got released. 
                 Another topic I am currently focused on is transforming a React Native app into an APK file.
               </p>
 
