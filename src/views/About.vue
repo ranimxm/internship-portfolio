@@ -9,7 +9,7 @@
           <div class="left">
             <p>
               I have a strong basis in front-end development, making websites with user-friendly interfaces.
-              My toolkit includes technologies like MongoDB, React Native, Vue, FLutter, Flask, EJS and NodeJS. 
+              My toolkit includes technologies like MongoDB, React Native, Vue, FLutter, Flask, EJS, React and NodeJS. 
               While my Python skills are still growing, I am always aeger to learn more.
             </p>
               <p>
@@ -24,7 +24,7 @@
               </p>
               <p>
                 I am currently studying WebAssembly (WASM), another new technology which recently got released. 
-                Another topic I am currently focused on is transforming a React Native app into an APK file.
+                Another topic I am currently focused on is creating a todo web using React.
               </p>
 
         </div>
