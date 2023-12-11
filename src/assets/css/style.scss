@@ -71,6 +71,22 @@ $background-color_3: var(--main);
     }
 }
 
+.github{
+    svg {
+            [data-color="1"] {
+                fill: #000000;
+            }
+
+        }
+    &:hover {
+            svg {
+                [data-color="1"] {
+                    fill: #9685ff;
+                }
+            }
+        }
+}
+
 body {
     font-family: $font-family_1;
     letter-spacing: .1em;

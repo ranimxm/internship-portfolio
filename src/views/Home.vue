@@ -34,8 +34,7 @@
                                           <p>View more</p>
                                       </figcaption>
                                   </router-link>
-                              </li>
-                
+                              </li>               
                   <li class="project-item">
                     <router-link to="/Twitter">
                           <figure class="item-top">
@@ -47,6 +46,17 @@
                           </figcaption>
                       </router-link>
                   </li>
+                  <li class="project-item">
+                        <router-link to="/ReactJS">
+                          <figure class="item-top">
+                                <img class="react" src="@/assets/img/todo.png">
+                          </figure>
+                          <figcaption class="item-caption">
+                                <h2>ReactJS Todo list</h2>
+                                 <p>View more</p>
+                          </figcaption>
+                        </router-link>
+                  </li>       
                   <li class="project-item">
                     <router-link to="/amw">
                           <figure class="item-top">
@@ -75,7 +85,7 @@
                                   <img src="@/assets/img/music.png">
                               </figure>
                               <figcaption class="item-caption">
-                                  <h2>Music Application using PWA </h2>
+                                  <h2>Music Application using PWA</h2>
                                   <p>View more</p>
                               </figcaption>
                           </router-link>
@@ -109,24 +119,20 @@ export default {
             // random helper
             var random = function () {
                 if (arguments.length === 1) {
-                    // only 1 argument
                     if (Array.isArray(arguments[0])) {
-                        // extract index from array
                         var index = Math.round(random(0, arguments[0].length - 1))
                         return arguments[0][index]
                     }
-                    return random(0, arguments[0]) // assume numeric
+                    return random(0, arguments[0]) 
                 } else if (arguments.length === 2) {
-                    // two arguments range
                     return Math.random() * (arguments[1] - arguments[0]) + arguments[0]
                 } else if (arguments.length === 4) {
                     //
 
                     var array = [arguments[0], arguments[1], arguments[2], arguments[3]]
                     return array[Math.floor(Math.random() * array.length)]
-                    //return console.log(item)
                 }
-                return 0 // default
+                return 0 
             }
 
             // screen helper
@@ -237,25 +243,15 @@ export default {
                 this._scroll = 0
                 this._ribbons = []
                 this._options = {
-                    // ribbon color HSL saturation amount
                     colorSaturation: '80%',
-                    // ribbon color HSL brightness amount
                     colorBrightness: '60%',
-                    // ribbon color opacity amount
                     colorAlpha: 0.65,
-                    // how fast to cycle through colors in the HSL color space
                     colorCycleSpeed: 6,
-                    // where to start from on the Y axis on each side (top|min, middle|center, bottom|max, random)
                     verticalPosition: 'center',
-                    // how fast to get to the other side of the screen
                     horizontalSpeed: 150,
-                    // how many ribbons to keep on screen at any given time
                     ribbonCount: 3,
-                    // add stroke along with ribbon fill colors
                     strokeSize: 0,
-                    // move ribbons vertically by a factor on page scroll
                     parallaxAmount: -0.5,
-                    // add animation effect to each ribbon section over time
                     animateSections: true
                 }
                 this._onDraw = this._onDraw.bind(this)
@@ -388,7 +384,7 @@ export default {
                 _drawRibbonSection: function (section) {
                     if (section) {
                         if (section.phase >= 1 && section.alpha <= 0) {
-                            return true // done
+                            return true 
                         }
                         if (section.delay <= 0) {
                             section.phase += 0.02
@@ -452,7 +448,7 @@ export default {
                         }
                         this._context.restore()
                     }
-                    return false // not done yet
+                    return false 
                 },
 
                 // Draw ribbons
@@ -520,7 +516,6 @@ export default {
                 }
             }
 
-            // export
             return Factory;
         })
 

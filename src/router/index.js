@@ -6,6 +6,7 @@ import Music from '../views/MusicApp.vue'
 import Twitter from '../views/Twitter.vue'
 import Note from '../views/NoteApp.vue'
 import react from '../views/react.vue'
+import todo from'../views/todo.vue'
 
 const routes = [
   {
@@ -42,6 +43,11 @@ const routes = [
     path: '/ReactNative',
     name: 'React Native',
     component: react
+  },
+  {
+    path: '/ReactJS',
+    name: 'ReactJS Todo',
+    component: todo
   }
 ]
 
