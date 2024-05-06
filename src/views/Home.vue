@@ -6,7 +6,7 @@
       <main class="home-main" id="home-main">
           <div class="intro">
               <h1 data-text="Hi, I'm Ranim,">Hi, I'm Ranim,</h1>
-              <h4>a 22 year old It student currently in my second year at Fontys University.<br>
+              <h4>a 22 year old It student currently in my third year at Fontys University.<br>
                 I thrive on challenges and often find myself pulling all-nighters to complete projects,<br>
                 with a little help from ChatGPT and Stack Overflow.
               </h4>
