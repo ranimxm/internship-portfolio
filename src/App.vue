@@ -1,38 +1,26 @@
-<template>
-  <AppHeader/>
-  <ScrollUpDown />
-  <router-view/>
+<script setup lang="ts">
+import { RouterView } from "vue-router";
+import AppHeader from "./components/AppHeader.vue";
+import footerDown from "./components/FooterDown.vue";
+import ScrollUpDown from "./components/ScrollUpDown.vue";
 
-  <footerDown/>
+// import "./assets/js/animation-scroll.js";
+
+import "./assets/css/style.scss";
+import "./assets/css/home.scss";
+import "./assets/css/projects.scss";
+import "./assets/css/work.scss";
+</script>
+
+<template>
+  <AppHeader />
+  <ScrollUpDown />
+  <RouterView />
+  <footerDown />
 </template>
 
-<script>
-import LoadingScreen from '@/components/loadingscreen.vue';
-import AppHeader from '@/components/header.vue';
-import footerDown from '@/components/footer.vue';
-import ScrollUpDown from '@/components/scrollupdown.vue';
-
-import '@/assets/js/animation-scroll.js';
-
-import '@/assets/css/style.scss';
-import '@/assets/css/home.scss';
-import '@/assets/css/projects.scss';
-import '@/assets/css/work.scss';
-
-
-export default {
-  name: 'App',
-  components: {
-    AppHeader,
-    footerDown,
-    LoadingScreen,
-    ScrollUpDown
-  }
-
-};
-</script>
-<style>
-#app{
+<style scoped>
+#app {
   display: flex;
   flex-direction: column;
 }

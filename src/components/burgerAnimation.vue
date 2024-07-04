@@ -1,62 +1,60 @@
 <template>
-    <div id="body">
-        <div id="ground"></div>
-        <div id="floor">
-            <div id="burger-container">
-            <div class="burder burger-top">
-              <div class="burger2-top-inner"></div>
-              <div class="burger-top-inner"></div>
-              <div class="dot dot-one"></div>
-              <div class="dot dot-two"></div>
-              <div class="dot dot-three"></div>
-              <div class="dot dot-four"></div>
-              <div class="dot dot-five"></div>
-              <div class="dot dot-six"></div>
-              <div class="dot dot-seven"></div>
-              <div class="dot dot-eight"></div>
-              <div id="eye-left"></div>
-              <div id="eye-right"></div>
-            </div>
-            <div class="green">
-              <div class="green-inner">
-                <div class="sub-green"></div>
-              </div>
-              <div class="green-shadow"></div>
-            </div>
-            <div class='red'>
-              <div class="red-inner"></div>
-              <div class="red-shadow"></div>
-            </div>
-            <div class="burder burger-bottom">
-              <div class="burger2-bottom-inner"></div>
-              <div class="burger-bottom-inner"></div>
-            </div>
-
+  <div id="body">
+    <div id="ground"></div>
+    <div id="floor">
+      <div id="burger-container">
+        <div class="burder burger-top">
+          <div class="burger2-top-inner"></div>
+          <div class="burger-top-inner"></div>
+          <div class="dot dot-one"></div>
+          <div class="dot dot-two"></div>
+          <div class="dot dot-three"></div>
+          <div class="dot dot-four"></div>
+          <div class="dot dot-five"></div>
+          <div class="dot dot-six"></div>
+          <div class="dot dot-seven"></div>
+          <div class="dot dot-eight"></div>
+          <div id="eye-left"></div>
+          <div id="eye-right"></div>
+        </div>
+        <div class="green">
+          <div class="green-inner">
+            <div class="sub-green"></div>
           </div>
-          <!--- start of chopsticks --->
-          <div id="chopsticks-container">
-            <div class='eye-s-left'></div>
-            <div class='eye-s-right'></div>
+          <div class="green-shadow"></div>
+        </div>
+        <div class="red">
+          <div class="red-inner"></div>
+          <div class="red-shadow"></div>
+        </div>
+        <div class="burder burger-bottom">
+          <div class="burger2-bottom-inner"></div>
+          <div class="burger-bottom-inner"></div>
+        </div>
+      </div>
+      <!--- start of chopsticks --->
+      <div id="chopsticks-container">
+        <div class="eye-s-left"></div>
+        <div class="eye-s-right"></div>
 
-            <div class="stick one">
-              <div class="inside-stick">
-                <div class="stick-shadow"></div>
-              </div>
-              <div class='stick-out-shadow'></div>
-            </div>
-            <div class="stick two">
-              <div class="inside-stick">
-                <div class="stick-shadow"></div>
-                <div class='stick-out-shadow'></div>
-              </div>
-            </div>
+        <div class="stick one">
+          <div class="inside-stick">
+            <div class="stick-shadow"></div>
+          </div>
+          <div class="stick-out-shadow"></div>
+        </div>
+        <div class="stick two">
+          <div class="inside-stick">
+            <div class="stick-shadow"></div>
+            <div class="stick-out-shadow"></div>
           </div>
         </div>
       </div>
+    </div>
+  </div>
 </template>
 
 <style scoped>
-
 div#floor {
   height: 4px;
   width: 800px;
@@ -74,7 +72,9 @@ div#burger-container {
   bottom: 0px;
   transform-origin: 200% center;
   left: 13%;
-  animation: ddd 0.7s ease 1, back 1s ease 1.5s 1;
+  animation:
+    ddd 0.7s ease 1,
+    back 1s ease 1.5s 1;
 }
 @keyframes back {
   25% {
@@ -118,7 +118,9 @@ div.burger-top {
   left: 6%;
   transform-origin: left bottom;
   overflow: hidden;
-  animation: sss 0.7s ease 1, back2 1s ease 1.5s 1;
+  animation:
+    sss 0.7s ease 1,
+    back2 1s ease 1.5s 1;
 }
 
 @keyframes back2 {
@@ -178,7 +180,9 @@ div.green {
   top: 58.5%;
   left: 4%;
   transform-origin: right bottom;
-  animation: gree 3s ease 1, green-back 1s ease 1.5s 1;
+  animation:
+    gree 3s ease 1,
+    green-back 1s ease 1.5s 1;
 }
 @keyframes green-back {
   25% {
@@ -326,7 +330,9 @@ div#eye-left {
   left: 60%;
   top: 40%;
   z-index: 5;
-  animation: eye 1.5s ease infinite, up 0.5s ease 1;
+  animation:
+    eye 1.5s ease infinite,
+    up 0.5s ease 1;
 }
 @keyframes up {
   50% {
@@ -348,7 +354,9 @@ div#eye-right {
   left: 85%;
   top: 40%;
   z-index: 5;
-  animation: eye 1.5s ease infinite, up 1s ease 1;
+  animation:
+    eye 1.5s ease infinite,
+    up 1s ease 1;
 }
 
 @keyframes eye {
@@ -370,7 +378,9 @@ div#chopsticks-container {
   top: -98px;
   left: 64%;
   transform: translate(-50%, -50%) rotate(35deg);
-  animation: chop 1s ease 1, go 1s ease 1.5s 1;
+  animation:
+    chop 1s ease 1,
+    go 1s ease 1.5s 1;
 }
 @keyframes go {
   50% {
@@ -402,7 +412,9 @@ div.stick {
 }
 div.one {
   transform: rotate(30deg);
-  animation: rot 1s ease 1, one 0.4s ease 1.8s 1;
+  animation:
+    rot 1s ease 1,
+    one 0.4s ease 1.8s 1;
 }
 @keyframes rot {
   50% {
@@ -422,7 +434,9 @@ div.one {
 }
 div.two {
   transform: rotate(-10deg);
-  animation: rot2 1s ease 1, two 0.4s ease 1.8s 1;
+  animation:
+    rot2 1s ease 1,
+    two 0.4s ease 1.8s 1;
 }
 @keyframes rot2 {
   50% {
@@ -483,17 +497,17 @@ div.eye-s-right {
 }
 
 @media screen and (max-width: 768px) {
-  div#floor{
-    height: .3em;
+  div#floor {
+    height: 0.3em;
     width: 100%;
   }
-  div#chopsticks-container{
+  div#chopsticks-container {
     left: 56%;
     height: 287px;
   }
 }
 @media screen and (max-width: 568px) {
-  div#floor{
+  div#floor {
     top: 100%;
   }
 }

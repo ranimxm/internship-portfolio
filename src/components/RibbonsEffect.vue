@@ -1,5 +1,3 @@
 <template>
-    <div id="ribbons-container"></div>
+  <div id="ribbons-container"></div>
 </template>
-
-
