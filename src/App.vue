@@ -6,10 +6,10 @@ import ScrollUpDown from "./components/ScrollUpDown.vue";
 
 // import "./assets/js/animation-scroll.js";
 
-import "./assets/css/style.scss";
-import "./assets/css/home.scss";
-import "./assets/css/projects.scss";
-import "./assets/css/work.scss";
+import "./styles/style.scss";
+import "./styles/home.scss";
+import "./styles/projects.scss";
+import "./styles/work.scss";
 </script>
 
 <template>

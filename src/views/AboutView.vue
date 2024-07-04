@@ -1,3 +1,15 @@
+<script lang="ts">
+import LoadingScreen from "../components/LoadingScreen.vue";
+import BurgerAnimation from "../components/BurgerAnimation.vue";
+
+export default {
+  components: {
+    LoadingScreen,
+    BurgerAnimation
+  }
+};
+</script>
+
 <template>
   <LoadingScreen />
 
@@ -19,32 +31,17 @@
             I chose the Media profile at Fontys University, which focuses on frontend development.
             Additionally, this profile has made me gain a broad knowledge about user research.
           </p>
-          <p>
-            I am currently studying WebAssembly (WASM), another new technology which recently got
-            released. Another topic I am currently focused on is creating a todo web using React.
-          </p>
         </div>
       </div>
     </div>
   </section>
+
   <div class="bottomg">
     <BurgerAnimation />
   </div>
 </template>
 
-<script>
-import LoadingScreen from "./components/loadingscreen.vue";
-import BurgerAnimation from "./components/burgerAnimation.vue";
-
-export default {
-  components: {
-    LoadingScreen,
-    BurgerAnimation
-  }
-};
-</script>
-
-<style>
+<style scoped>
 .bottomg {
   height: 55vh;
   background-color: #9685ff;

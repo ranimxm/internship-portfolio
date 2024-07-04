@@ -499,10 +499,10 @@ div.eye-s-right {
 @media screen and (max-width: 768px) {
   div#floor {
     height: 0.3em;
-    width: 100%;
+    width: 95%;
   }
   div#chopsticks-container {
-    left: 56%;
+    left: 46%;
     height: 287px;
   }
 }

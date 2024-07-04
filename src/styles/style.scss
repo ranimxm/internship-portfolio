@@ -7,6 +7,12 @@ $background-color_3: var(--main);
 
 @import "https://fonts.googleapis.com/css2?family=Questrial&display=swap";
 
+body {
+  font-family: $font-family_1;
+  letter-spacing: 0.1em;
+  background-color: $background-color_1;
+}
+
 /*making the animation*/
 @keyframes animate {
   0% {
@@ -84,12 +90,6 @@ $background-color_3: var(--main);
       }
     }
   }
-}
-
-body {
-  font-family: $font-family_1;
-  letter-spacing: 0.1em;
-  background-color: $background-color_1;
 }
 
 .reveal {

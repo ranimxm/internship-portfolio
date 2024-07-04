@@ -2,7 +2,7 @@
 import { onMounted } from "vue";
 import createRibbons from "../util/ribbons.ts";
 import LoadingScreen from "../components/LoadingScreen.vue";
-import introView from "../components/HomeView/IntroView.vue";
+import introView from "../components/IntroView.vue";
 
 onMounted(() => {
   createRibbons({
