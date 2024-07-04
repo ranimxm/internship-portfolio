@@ -1,6 +1,6 @@
 <script lang="ts">
-import LoadingScreen from "../components/loadingscreen.vue";
-import WorkItem from "../components/WorkItem.vue";
+import LoadingScreen from "../../components/LoadingScreen.vue";
+import WorkItem from "../../components/WorkItem.vue";
 
 export default {
   components: {
