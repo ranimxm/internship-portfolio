@@ -1,9 +1,48 @@
+<script lang="ts">
+import { ref, onMounted } from "vue";
+
+export default {
+  setup() {
+    const navActive = ref(false);
+    const menuActive = ref(false);
+    const pdfUrl = "/files/CV Ranim.pdf";
+
+    const toggleMenu = () => {
+      navActive.value = !navActive.value;
+      menuActive.value = !menuActive.value;
+    };
+
+    // const openPDF = () => {
+    //   window.open(pdfUrl, "_blank");
+    // };
+
+    onMounted(() => {
+      const navigation = document.getElementById("nav");
+      const menu = document.getElementById("menu");
+
+      menu?.addEventListener("click", () => {
+        if (navigation) {
+          navigation.style.setProperty("--childenNumber", navigation.children.length.toString());
+        }
+      });
+    });
+
+    return {
+      navActive,
+      menuActive,
+      toggleMenu,
+      pdfUrl
+    };
+  }
+};
+</script>
+
 <template>
   <header id="top" class="header">
     <div class="logo"></div>
     <nav class="nav">
       <div>
-        <ul id="nav">
+        <ul :class="{ active: navActive }" id="nav">
           <li>
             <router-link to="/">Work</router-link>
           </li>
@@ -11,11 +50,11 @@
             <router-link to="/about">About</router-link>
           </li>
           <li>
-            <a @click="openPDF" href="#">CV</a>
+            <a :href="pdfUrl" target="_blank">CV</a>
           </li>
         </ul>
       </div>
-      <div class="menu" id="menu">
+      <div :class="{ active: menuActive }" class="menu" id="menu" @click="toggleMenu">
         <span></span>
         <span></span>
         <span></span>
@@ -23,53 +62,3 @@
     </nav>
   </header>
 </template>
-
-<!-- <script>
-export default {
-  name: "AppHeader",
-  methods: {
-    openPDF() {
-      const pdfUrl = "/files/Cv Ranim.pdf";
-      window.open(pdfUrl, "_blank");
-    }
-  },
-  mounted() {
-    const navigation = document.getElementById("nav");
-    const menu = document.getElementById("menu");
-
-    menu.addEventListener("click", () => {
-      navigation.style.setProperty("--childenNumber", navigation.children.length);
-      navigation.classList.toggle("active");
-      menu.classList.toggle("active");
-    });
-  }
-};
-</script> -->
-
-<script lang="ts">
-import { ref } from "vue";
-
-export default {
-  setup() {
-    const navActive = ref(false);
-    const menuActive = ref(false);
-
-    const toggleMenu = () => {
-      navActive.value = !navActive.value;
-      menuActive.value = !menuActive.value;
-    };
-
-    const openPDF = () => {
-      const pdfUrl = "/files/Cv Ranim.pdf";
-      window.open(pdfUrl, "_blank");
-    };
-
-    return {
-      navActive,
-      menuActive,
-      toggleMenu,
-      openPDF
-    };
-  }
-};
-</script>
