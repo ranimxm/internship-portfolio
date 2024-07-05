@@ -17,7 +17,7 @@ import LinkedInIcon from "./icons/IconLinkedIn.vue";
       <a href="mailto: ranimm01@hotmail.com" class="mail">
         <EmailIcon />
       </a>
-      <a href="https://www.linkedin.com/in/ranim-m" target="_blank" class="linkedin-link">
+      <a href="https://www.linkedin.com/in/ranim-m" target="_blank" class="github">
         <LinkedInIcon />
       </a>
     </div>
