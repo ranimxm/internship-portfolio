@@ -1,11 +1,11 @@
 <script lang="ts">
 import LoadingScreen from "../../components/LoadingScreen.vue";
-import WorkItem from "../../components/WorkItem.vue";
+import ProjectDetails from "../../components/ProjectDetails.vue";
 
 export default {
   components: {
     LoadingScreen,
-    WorkItem
+    ProjectDetails
   }
 };
 </script>
@@ -15,7 +15,7 @@ export default {
 
   <section class="work-section" id="work">
     <div class="work-container">
-      <WorkItem :imageSrc="'./assets/img/amw-i.gif'" :reverse="true">
+      <ProjectDetails :imageSrc="'./assets/img/amw-i.gif'" :reverse="true">
         <template #content>
           <h3>Bootstrap, PHP</h3>
           <h1>AMW Veranda</h1>
@@ -46,7 +46,7 @@ export default {
             </p>
           </div>
         </template>
-      </WorkItem>
+      </ProjectDetails>
       <!-- <div class="work-item reverse">
         <div class="right">
           <h3>Bootstrap, PHP</h3>
