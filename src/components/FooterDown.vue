@@ -23,9 +23,3 @@ import LinkedInIcon from "./icons/IconLinkedIn.vue";
     </div>
   </footer>
 </template>
-
-<style scoped>
-.footer {
-  flex-shrink: 0;
-}
-</style>

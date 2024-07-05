@@ -37,10 +37,9 @@ $color_2: var(--text);
 }
 
 .home-main {
-  padding: 3em;
   display: flex;
   flex-direction: column;
-  height: 99vh;
+  height: 85vh;
   justify-content: space-around;
   align-items: center;
   align-content: center;
@@ -80,6 +79,7 @@ $color_2: var(--text);
   justify-content: center;
   gap: 2em;
   height: 50%;
+  padding: 3em;
 }
 
 .go-down-container {

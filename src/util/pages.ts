@@ -1,5 +1,4 @@
 import Home from "../views/HomeView.vue";
-// import Amw from "../views/AmwView.vue";
 // import Music from "../views/MusicAppView.vue";
 // import Twitter from "../views/TwitterView.vue";
 // import Note from "../views/NoteAppView.vue";
@@ -16,12 +15,12 @@ export const routes = [
     path: "/About",
     name: "About",
     component: () => import("../views/AboutView.vue")
+  },
+  {
+    path: "/Amw",
+    name: "AMW Veranda",
+    component: () => import("../views/project-items/AmwView.vue")
   }
-  // {
-  //   path: "/amw",
-  //   name: "AMW Veranda",
-  //   component: Amw
-  // },
   // {
   //   path: "/MusicApp",
   //   name: "Music App",

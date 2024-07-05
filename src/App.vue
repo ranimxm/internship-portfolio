@@ -4,7 +4,7 @@ import AppHeader from "./components/AppHeader.vue";
 import footerDown from "./components/FooterDown.vue";
 import ScrollUpDown from "./components/ScrollUpDown.vue";
 
-// import "./assets/js/animation-scroll.js";
+import "./util/animationScroll";
 
 import "./styles/style.scss";
 import "./styles/home.scss";

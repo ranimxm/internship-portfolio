@@ -1,0 +1,38 @@
+[
+  {
+    "route": "/ReactNative",
+    "imageSrc": "/src/assets/img/react.png",
+    "title": "React Native Music Application 2",
+    "description": "View more"
+  },
+  {
+    "route": "/Twitter",
+    "imageSrc": "/src/assets/img/twt-ii.png",
+    "title": "Recreated Twitter partly using MongoDB",
+    "description": "View more"
+  },
+  {
+    "route": "/ReactJS",
+    "imageSrc": "/src/assets/img/todo.png",
+    "title": "ReactJS Todo list",
+    "description": "View more"
+  },
+  {
+    "route": "/amw",
+    "imageSrc": "/src/assets/img/amw.png",
+    "title": "AMW Veranda using PHP",
+    "description": "View more"
+  },
+  {
+    "route": "/note",
+    "imageSrc": "/src/assets/img/img.png",
+    "title": "Note App with EJS",
+    "description": "View more"
+  },
+  {
+    "route": "/MusicApp",
+    "imageSrc": "/src/assets/img/music.png",
+    "title": "Music Application using PWA",
+    "description": "View more"
+  }
+]
