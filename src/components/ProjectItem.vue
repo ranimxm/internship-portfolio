@@ -1,10 +1,34 @@
 <script lang="ts">
-import projects from "../assets/projects.json";
+import type { Project } from "@/types/Project";
+import { ref, onMounted } from "vue";
 
 export default {
-  data() {
+  setup() {
+    const projects = ref([] as Project[]);
+
+    const fetchData = () => {
+      fetch("/data/projects.json")
+        .then((response) => response.json())
+        .then((data) => {
+          projects.value = data;
+        })
+        .catch((error) => {
+          console.error("Error fetching data:", error);
+        });
+    };
+
+    const getImageUrl = (relativePath: string) => {
+      console.log("Relative Path: ", relativePath);
+      return new URL(`../assets/${relativePath}`, import.meta.url).href;
+    };
+
+    onMounted(() => {
+      fetchData();
+    });
+
     return {
-      projects: projects
+      projects,
+      getImageUrl
     };
   }
 };
@@ -18,7 +42,7 @@ export default {
         <li v-for="project in projects" :key="project.route" class="project-item">
           <router-link :to="project.route">
             <figure class="item-top">
-              <img :src="project.imageSrc" />
+              <img :src="getImageUrl(project.imageSrc)" />
             </figure>
             <figcaption class="item-caption">
               <h2>{{ project.title }}</h2>
