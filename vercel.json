@@ -1,7 +1,0 @@
-{
-  "github": {
-    "silent": false,
-    "autoJobCancelation": true,
-    "ignoredBuildStep": "./ignore-build.sh"
-  }
-}
