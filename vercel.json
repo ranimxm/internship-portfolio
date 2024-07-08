@@ -1,11 +1,8 @@
 {
-  "github": {
-    "silent": true,
-    "deployments": {
-      "preview": {
-        "enabled": true,
-        "branches": ["develop"]
-      }
+  "builds": [
+    {
+      "src": "ignore-preview-vercel.sh",
+      "use": "@vercel/ignore-build-step"
     }
-  }
+  ]
 }
