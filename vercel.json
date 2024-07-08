@@ -1,8 +1,7 @@
 {
-  "builds": [
-    {
-      "src": "ignore-preview-vercel.sh",
-      "use": "@vercel/ignore-build-step"
-    }
-  ]
+  "github": {
+    "silent": false,
+    "autoJobCancelation": true,
+    "ignoredBuildStep": "./ignore-build.sh"
+  }
 }
