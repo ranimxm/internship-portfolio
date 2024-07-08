@@ -20,6 +20,11 @@ export const routes = [
     path: "/Amw",
     name: "AMW Veranda",
     component: () => import("../views/project-items/AmwView.vue")
+  },
+  {
+    path: "/:pathMatch(.*)*",
+    name: "Page not found",
+    component: () => import("../components/PageNotFound.vue")
   }
   // {
   //   path: "/MusicApp",
