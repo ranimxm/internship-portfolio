@@ -1,9 +1,4 @@
 import Home from "../views/HomeView.vue";
-// import Music from "../views/MusicAppView.vue";
-// import Twitter from "../views/TwitterView.vue";
-// import Note from "../views/NoteAppView.vue";
-// import react from "../views/ReactView.vue";
-// import todo from "../views/TodoView.vue";
 
 export const routes = [
   {
@@ -22,33 +17,33 @@ export const routes = [
     component: () => import("../views/project-items/AmwView.vue")
   },
   {
+    path: "/MusicApp",
+    name: "Music App",
+    component: () => import("../views/project-items/MusicAppView.vue")
+  },
+  {
+    path: "/Twitter",
+    name: "Twitter Recreation",
+    component: () => import("../views/project-items/TwitterView.vue")
+  },
+  {
+    path: "/note",
+    name: "Note App",
+    component: () => import("../views/project-items/NoteAppView.vue")
+  },
+  {
+    path: "/ReactNative",
+    name: "React Native",
+    component: () => import("../views/project-items/ReactView.vue")
+  },
+  {
+    path: "/ReactJS",
+    name: "ReactJS Todo",
+    component: () => import("../views/project-items/TodoView.vue")
+  },
+  {
     path: "/:pathMatch(.*)*",
     name: "Page not found",
     component: () => import("../components/PageNotFound.vue")
   }
-  // {
-  //   path: "/MusicApp",
-  //   name: "Music App",
-  //   component: Music
-  // },
-  // {
-  //   path: "/Twitter",
-  //   name: "Twitter Recreation",
-  //   component: Twitter
-  // },
-  // {
-  //   path: "/note",
-  //   name: "Note App",
-  //   component: Note
-  // },
-  // {
-  //   path: "/ReactNative",
-  //   name: "React Native",
-  //   component: react
-  // },
-  // {
-  //   path: "/ReactJS",
-  //   name: "ReactJS Todo",
-  //   component: todo
-  // }
 ];
