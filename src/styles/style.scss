@@ -111,6 +111,56 @@ body {
   opacity: 1;
 }
 
+.height {
+  height: 81.5dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .button-to-home {
+    padding-top: 10dvh;
+  }
+
+  .button-to-home p {
+      font-size: 20px;
+      font-weight: 500;
+      width: fit-content;
+      color: $color_2;
+      position: relative;
+      padding-bottom: 3px;
+  
+      &::after {
+        content: "";
+        width: 0%;
+        height: 2px;
+        border-radius: 99px;
+        background-color: $background-color_3;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: 0.3s ease;
+      }
+  
+      &:hover {
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+}
+.header-title {
+  font-size: 32px;
+  font-weight: 500;
+  color: #ff5b5b;
+  padding: 18px 0;
+}
+.header-description {
+  font-size: 22px;
+  font-weight: 400;
+  color: $color_1;
+}
+
 .header {
   width: 100%;
   background-color: $background-color_2;
@@ -306,7 +356,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 0.3em;
+  gap: 0.5em;
 
   .mail {
     transform: translate(0, 0.1em);
@@ -348,6 +398,10 @@ body {
     justify-content: flex-end;
   }
 
+  .height {
+    height: 84.2dvh;
+  }
+
   nav {
     ul {
       --height: 0px;
@@ -384,5 +438,9 @@ body {
 
   .go-down-top-container {
     right: 23px;
+  }
+
+  .footer {
+    padding: 1em;
   }
 }
