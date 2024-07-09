@@ -18,7 +18,6 @@ export default {
     };
 
     const getImageUrl = (relativePath: string) => {
-      console.log("Relative Path: ", relativePath);
       return new URL(`../assets/${relativePath}`, import.meta.url).href;
     };
 
