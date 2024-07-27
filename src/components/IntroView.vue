@@ -9,7 +9,7 @@
   </div>
 
   <div class="go-down-container">
-    <p>Excited to see my work hah?</p>
+    <p>Excited to see my work hah??</p>
     <a href="#work" class="go-down"></a>
   </div>
 </template>
