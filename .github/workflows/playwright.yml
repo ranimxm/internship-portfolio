@@ -64,11 +64,12 @@ jobs:
           else
             DEPLOY_ENV="preview"
           fi
-          curl -X POST -H "Authorization: token $GITHUB_TOKEN" -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/${{ github.repository }}/deployments -d '{
+          RESPONSE=$(curl -X POST -H "Authorization: token $GITHUB_TOKEN" -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/${{ github.repository }}/deployments -d '{
             "ref": "${{ github.sha }}",
             "task": "deploy",
             "auto_merge": false,
             "environment": "'$DEPLOY_ENV'",
             "description": "Deploying to Vercel",
             "required_contexts": []
-          }'
+          }')
+          echo "Deployment Response: $RESPONSE"
