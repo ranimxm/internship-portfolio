@@ -22,4 +22,4 @@ jobs:
       - name: deploy preview + assign beta domain
         run: |
           vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }} > domain.txt
-          vercel alias --scope ${{ secrets.VERCEL_PROJECT_ID }} --token ${{ secrets.VERCEL_TOKEN }} set `cat domain.txt` biodrop-preview.vercel.app
+          vercel alias --token ${{ secrets.VERCEL_TOKEN }} set `cat domain.txt` prreview.vercel.app
