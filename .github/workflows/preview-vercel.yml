@@ -34,9 +34,8 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const github = require('@actions/github');
-            const octokit = github.getOctokit(process.env.GITHUB_TOKEN);
-            const context = github.context;
+            const { getOctokit, context } = require('@actions/github');
+            const octokit = getOctokit(process.env.GITHUB_TOKEN);
 
             const deployment = await octokit.repos.createDeployment({
               owner: context.repo.owner,
