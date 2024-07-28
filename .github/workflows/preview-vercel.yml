@@ -21,13 +21,29 @@ jobs:
         run: |
           DEPLOY_URL=$(vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }} --env=preview)
           echo "DEPLOY_URL=$DEPLOY_URL" >> $GITHUB_ENV
+          echo "DEPLOY_URL=$DEPLOY_URL" >> $GITHUB_ENV
           vercel alias --token ${{ secrets.VERCEL_TOKEN }} set $DEPLOY_URL prreview.vercel.app
       - name: Create GitHub Deployment Status
-        uses: octokit/request-action@v2.x
+        uses: actions/github-script@v5
         with:
-          route: POST /repos/${{ github.repository }}/statuses/${{ github.sha }}
-          token: ${{ secrets.GITHUB_TOKEN }}
-          state: success
-          target_url: ${{ env.DEPLOY_URL }}
-          description: 'Preview deployment successful'
-          context: 'continuous-integration/vercel'
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const deployment = await github.repos.createDeployment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: context.sha,
+              required_contexts: [],
+              environment: 'preview',
+              transient_environment: true,
+              description: 'Vercel Preview Deployment'
+            });
+
+            await github.repos.createDeploymentStatus({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              deployment_id: deployment.data.id,
+              state: 'success',
+              environment_url: process.env.DEPLOY_URL,
+              log_url: process.env.DEPLOY_URL,
+              description: 'Preview deployment successful',
+            });
