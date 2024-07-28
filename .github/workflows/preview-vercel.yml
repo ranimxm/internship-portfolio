@@ -46,13 +46,3 @@ jobs:
               transient_environment: true,
               description: 'Vercel Preview Deployment'
             });
-
-            await octokit.repos.createDeploymentStatus({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              deployment_id: deployment.data.id,
-              state: 'success',
-              environment_url: process.env.DEPLOY_URL,
-              log_url: process.env.DEPLOY_URL,
-              description: 'Preview deployment successful',
-            });
