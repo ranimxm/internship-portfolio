@@ -27,6 +27,6 @@ jobs:
 
       - name: Deploy preview + assign beta domain
         run: |
-          DEPLOY_URL=$(vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }} --env=preview --project-id=${{ secrets.VERCEL_PROJECT_ID }} --org-id=${{ secrets.VERCEL_ORG_ID }})
+          DEPLOY_URL=$(vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }} --env=preview --commit=${{ github.sha }})
           echo "DEPLOY_URL=$DEPLOY_URL" >> $GITHUB_ENV
-          vercel alias --token ${{ secrets.VERCEL_TOKEN }} set $DEPLOY_URL preview-ranim-portfolio.vercel.app
+          vercel alias --token ${{ secrets.VERCEL_TOKEN }} set $DEPLOY_URL prreview.vercel.app
