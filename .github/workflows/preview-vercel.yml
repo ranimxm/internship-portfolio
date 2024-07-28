@@ -34,13 +34,13 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const github = require('@actions/github');
-            const octokit = github.getOctokit(process.env.GITHUB_TOKEN);
+            const { getOctokit, context } = require('@actions/github');
+            const octokit = getOctokit(process.env.GITHUB_TOKEN);
 
             const deployment = await octokit.repos.createDeployment({
-              owner: github.context.repo.owner,
-              repo: github.context.repo.repo,
-              ref: github.context.sha,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: context.sha,
               required_contexts: [],
               environment: 'preview',
               transient_environment: true,
@@ -48,8 +48,8 @@ jobs:
             });
 
             await octokit.repos.createDeploymentStatus({
-              owner: github.context.repo.owner,
-              repo: github.context.repo.repo,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
               deployment_id: deployment.data.id,
               state: 'success',
               environment_url: process.env.DEPLOY_URL,
