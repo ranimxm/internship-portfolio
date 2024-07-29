@@ -19,10 +19,16 @@ jobs:
           key: ${{ runner.os }}-buildx-${{ github.sha }}
           restore-keys: |
             ${{ runner.os }}-buildx-
-      - name: Build Docker image
-        run: docker build --cache-from type=local,src=/tmp/.buildx-cache --cache-to type=local,dest=/tmp/.buildx-cache --file Dockerfile -t playwright-tests .
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          file: Dockerfile
+          tags: playwright-tests:latest
+          cache-from: type=local,src=/tmp/.buildx-cache
+          cache-to: type=local,dest=/tmp/.buildx-cache,mode=max
       - name: Run Playwright tests in Docker
-        run: docker run --ipc=host -v ${{ github.workspace }}:/usr/src/app playwright-tests
+        run: docker run --ipc=host -v ${{ github.workspace }}:/usr/src/app playwright-tests:latest
       - uses: actions/upload-artifact@v4
         if: always()
         with:
