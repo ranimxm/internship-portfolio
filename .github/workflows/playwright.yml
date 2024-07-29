@@ -8,10 +8,13 @@ jobs:
   test:
     timeout-minutes: 10
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
+
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v2
+        uses: docker/setup-buildx-action@v1
+
       - name: Cache Docker layers
         uses: actions/cache@v3
         with:
@@ -19,16 +22,16 @@ jobs:
           key: ${{ runner.os }}-buildx-${{ github.sha }}
           restore-keys: |
             ${{ runner.os }}-buildx-
-      - name: Build and push Docker image
-        uses: docker/build-push-action@v4
-        with:
-          context: .
-          file: Dockerfile
-          tags: playwright-tests:latest
-          cache-from: type=local,src=/tmp/.buildx-cache
-          cache-to: type=local,dest=/tmp/.buildx-cache,mode=max
-      - name: Run Playwright tests in Docker
-        run: docker run --ipc=host -v ${{ github.workspace }}:/usr/src/app playwright-tests:latest
+
+      - name: Docker Login
+        run: echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+
+      - name: Build Docker image
+        run: docker build . -t playwright-tests
+
+      - name: Run Playwright tests
+        run: docker run playwright-tests
+
       - uses: actions/upload-artifact@v4
         if: always()
         with:
