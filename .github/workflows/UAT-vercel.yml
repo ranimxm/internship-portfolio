@@ -1,11 +1,12 @@
-name: Vercel UAT Deployment
+name: UAT Deployment
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 
 on:
   push:
-    branches: [ "develop" ]
+    branches:
+      - develop
 
 jobs:
   Deploy-Preview:
@@ -13,6 +14,7 @@ jobs:
     environment:
       name: UAT
       url: https://UAT-R.vercel.app
+    
     steps:
       - uses: actions/checkout@v2
 
