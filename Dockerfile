@@ -4,9 +4,8 @@ WORKDIR /app
 
 COPY package*.json ./
 
-RUN npm ci
-
 COPY . .
+RUN npm ci
 
 RUN npx -y playwright@1.45.1 install --with-deps
 
