@@ -12,10 +12,17 @@ jobs:
       - uses: actions/checkout@v4
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
+      - name: Cache Docker layers
+        uses: actions/cache@v3
+        with:
+          path: /tmp/.buildx-cache
+          key: ${{ runner.os }}-buildx-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-buildx-
       - name: Build Docker image
-        run: docker build -t playwright-tests:latest .
+        run: docker build --cache-from type=local,src=/tmp/.buildx-cache --cache-to type=local,dest=/tmp/.buildx-cache --file Dockerfile -t playwright-tests .
       - name: Run Playwright tests in Docker
-        run: docker run --rm -v ${{ github.workspace }}:/app -w /app playwright-tests:latest
+        run: docker run --ipc=host -v ${{ github.workspace }}:/usr/src/app playwright-tests
       - uses: actions/upload-artifact@v4
         if: always()
         with:

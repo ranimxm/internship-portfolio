@@ -1,13 +1,11 @@
-FROM mcr.microsoft.com/playwright:focal
+FROM mcr.microsoft.com/playwright:v1.45.1-jammy
 
-WORKDIR /app
+WORKDIR /usr/src/app
 
 COPY package*.json ./
 
 RUN npm ci
 
 COPY . .
-
-RUN npx playwright install --with-deps
 
 CMD ["npx", "playwright", "test"]
