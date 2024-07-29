@@ -5,14 +5,13 @@ env:
 
 on:
   push:
-    branches-ignore:
-      - main
+    branches: [ "develop" ]
 
 jobs:
   Deploy-Preview:
     runs-on: ubuntu-latest
     environment:
-      name: preview
+      name: UAT
       url: ${{ steps.deploy.outputs.url }}
     steps:
       - uses: actions/checkout@v2
