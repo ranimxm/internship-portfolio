@@ -1,4 +1,4 @@
-name: Vercel Preview Deployment
+name: Vercel UAT Deployment
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: UAT
-      url: ${{ steps.deploy.outputs.url }}
+      url: https://UAT-R.vercel.app
     steps:
       - uses: actions/checkout@v2
 
@@ -30,5 +30,5 @@ jobs:
         run: |
           DEPLOY_URL=$(vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }} --env=preview)
           echo "DEPLOY_URL=$DEPLOY_URL" >> $GITHUB_ENV
-          vercel alias --token ${{ secrets.VERCEL_TOKEN }} set $DEPLOY_URL prreview.vercel.app
+          vercel alias --token ${{ secrets.VERCEL_TOKEN }} set $DEPLOY_URL UAT-R.vercel.app
           echo "::set-output name=url::$DEPLOY_URL"
