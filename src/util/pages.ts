@@ -42,7 +42,7 @@ export const routes = [
     component: () => import("../views/project-items/TodoView.vue")
   },
   {
-    path: "*",
+    path: "/:pathMatch(.*)*",
     name: "Page not found",
     component: () => import("../components/PageNotFound.vue")
   }
