@@ -32,8 +32,8 @@ export default {
     <template #content>
       <div class="text">
         <p>
-          <a href="https://twittah.onrender.com" target="_blank">The website</a> is being hosted on
-          Render.
+          <a href="https://twittah.onrender.com" class="link" target="_blank">The website</a> is
+          being hosted on Render.
         </p>
         <p>
           As part of a school challenge, I was tasked with recreating a website, and I decided to

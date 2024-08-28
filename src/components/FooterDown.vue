@@ -23,3 +23,9 @@ import LinkedInIcon from "./icons/IconLinkedIn.vue";
     </div>
   </footer>
 </template>
+
+<style scoped>
+.footer {
+  position: relative;
+}
+</style>

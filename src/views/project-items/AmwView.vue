@@ -32,8 +32,8 @@ export default {
     <template #content>
       <div class="text">
         <p>
-          <a href="http://amwveranda.nl/" target="_blank">The website</a> is currently being hosted
-          on GoDaddy.
+          <a href="http://amwveranda.nl/" target="_blank" class="link">The website</a> is currently
+          being hosted on GoDaddy.
         </p>
         <p>
           I had the opportunity to create a website for a company that specializes in making
