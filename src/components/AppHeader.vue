@@ -44,7 +44,7 @@ export default {
             <router-link to="/about" @click="toggleMenu">About</router-link>
           </li>
           <li>
-            <a href="/files/CV Ranim.pdf" target="_blank">CV</a>
+            <router-link to="/contact" @click="toggleMenu">Contact</router-link>
           </li>
         </ul>
       </div>

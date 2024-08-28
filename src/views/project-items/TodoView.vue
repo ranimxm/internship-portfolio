@@ -30,8 +30,9 @@ export default {
     <template #content>
       <div class="text">
         <p>
-          The <a href="https://todo-list-2k6n.onrender.com/" target="_blank">todo list</a> is
-          currently hosted on Render.
+          The
+          <a href="https://todo-list-2k6n.onrender.com/" class="link" target="_blank">todo list</a>
+          is currently hosted on Render.
         </p>
         <p></p>
       </div>

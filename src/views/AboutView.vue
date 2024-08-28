@@ -1,13 +1,6 @@
-<script lang="ts">
-import LoadingScreen from "../components/LoadingScreen.vue";
-import BurgerAnimation from "../components/BurgerAnimation.vue";
-
-export default {
-  components: {
-    LoadingScreen,
-    BurgerAnimation
-  }
-};
+<script setup lang="ts">
+import LoadingScreen from "@/components/LoadingScreen.vue";
+import JobsTabs from "@/components/JobsTabs.vue";
 </script>
 
 <template>
@@ -19,35 +12,46 @@ export default {
       <div class="container">
         <div class="left">
           <p>
-            I have a strong basis in front-end development, making websites with user-friendly
-            interfaces. My toolkit includes technologies like MongoDB, React Native, Vue, FLutter,
-            Flask, EJS, React and NodeJS. While my Python skills are still growing, I am always
-            aeger to learn more.
+            Hi, my name is Ranim Mohammad. I am a frontend developer based in Eindhoven,
+            Netherlands. I currently am studying ICT & Media Design at
+            <a link="https://www.fontys.nl/Home.htm" target="_blank" class="link"
+              >Fontys University of Applied Sciences</a
+            >. Right now, I am in my sixth semester.
+          </p>
+          <p>
+            I chose the Media Design profile, which focuses on frontend development. Additionally,
+            this profile has made me gain a broad knowledge about user research.
           </p>
           <p>Outside coding, I like to draw, playing games and read books.</p>
         </div>
         <div class="right">
-          <p>
-            I chose the Media profile at Fontys University, which focuses on frontend development.
-            Additionally, this profile has made me gain a broad knowledge about user research.
-          </p>
+          <p>My skills are the following:</p>
+          <div class="container">
+            <ul class="left">
+              <li>- Javascript (ES6+)</li>
+              <li>- HTML/CSS</li>
+              <li>- React.js</li>
+              <li>- Playwright</li>
+              <li>- Figma</li>
+            </ul>
+            <ul class="right">
+              <li>- Vue.js</li>
+              <li>- React Native</li>
+              <li>- Node.js</li>
+              <li>- Docker</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
+    <div class="about" style="padding-bottom: 0">
+      <h3>Experiences</h3>
+      <JobsTabs />
+    </div>
   </section>
-
-  <div class="bottomg">
-    <BurgerAnimation />
-  </div>
 </template>
 
 <style scoped>
-.bottomg {
-  height: 55vh;
-  background-color: #9685ff;
-  width: 100%;
-}
-
 .about-container {
   display: flex;
   align-items: center;

@@ -29,8 +29,8 @@ export default {
     <template #content>
       <div class="text">
         <p>
-          The <a href="https://scara.netlify.app/" target="_blank">music app</a> is currently hosted
-          on Netlify.
+          The <a href="https://scara.netlify.app/" target="_blank" class="link">music app</a> is
+          currently hosted on Netlify.
         </p>
         <p>
           As a devoted fan of a particular fandom, a friend approached me with an interesting
