@@ -30,7 +30,7 @@ export default {
     <template #content>
       <div class="text">
         <p>
-          The <a href="https://duocase.onrender.com/" target="_blank">note app</a> is currently
+          The <a href="https://duocase.onrender.com/" class="link" target="_blank">note app</a> is
           hosted on Render.
         </p>
         <p>

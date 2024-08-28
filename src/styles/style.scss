@@ -169,6 +169,30 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+.link {
+  font-weight: 700;
+  cursor: pointer;
+  color: #796bce;
+  position: relative;
+  padding-bottom: 3px;
+  text-decoration: none;
+}
+
+.link::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  border-radius: 99px;
+  background-color: #6853f1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.link:hover::after {
+  width: 100%;
+}
 
 .nav {
   display: flex;
