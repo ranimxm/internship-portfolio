@@ -5,9 +5,9 @@ export default {
       activeTab: 0,
       tabs: [
         {
-          name: "iO Design",
+          name: "iO Digital",
           rolePrefix: "Intern Front End Development",
-          companyName: "iO Design",
+          companyName: "iO Digital",
           companyUrl: "https://www.iodigital.com",
           period: "Feb. 2024 – July 2024",
           tasks: [
@@ -50,7 +50,7 @@ export default {
           period: "Dec. 2022 – Mar. 2023",
           tasks: [
             "Responsible for creating the backend;",
-            "Contributed to the design of the user interface and its research."
+            "Contributed to the Digital of the user interface and its research."
           ]
         },
         {
