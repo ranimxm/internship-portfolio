@@ -6,7 +6,7 @@
 
 <style scoped>
 .loader-container {
-  background-color: #ffff;
+  background-color: var(--back);
   position: fixed;
   z-index: 999;
   top: 0;
